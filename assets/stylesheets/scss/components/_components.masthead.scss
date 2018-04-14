@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Masthead (aka logo)
+   ========================================================================== */
+
+.masthead {
+	// position: relative;
+	display: block;
+	padding-top: rhythm(.5);
+	padding-bottom: rhythm(.5);
+
+	h1,
+	a {
+		font-weight: 300; // Reset default browser weight for h1 (e.g. ‘bold’)
+	}
+
+	// // .template-project &,
+	// .template-error & {
+	// 	color: $color-link-light;
+	// }
+
+	a {
+		position: relative;
+		color: rgba($color-link-dark,.6);
+
+		&:hover,
+		&:focus {
+			color: $color-link-dark;
+
+			.no-touchevents & {
+				top: -2px;
+				border-bottom: 2px solid $color-link-dark;
+			}
+		}
+		&:active {
+
+			.no-touchevents & {
+				top: 0;
+				border-bottom-width: 0;
+			}
+		}
+
+		// // .template-project &,
+		// .template-error & {
+		// 	color: rgba($color-link-light,.7);
+
+		// 	&:hover,
+		// 	&:focus {
+		// 		color: $color-link-light;
+		// 	}
+		// }
+
+		// // .template-project.no-touchevents &,
+		// .template-error.no-touchevents & {
+
+		// 	&:hover,
+		// 	&:focus {
+		// 		border-bottom-color: $color-link-light;
+		// 	}
+		// }
+	}
+
+	// Vertical line
+	// &:before {
+	// 	position: absolute;
+	// 	top: rhythm(-1.5);
+	// 	bottom: 0;
+	// 	left: 50%;
+	// 	height: rhythm(2); // Lenght of vertical line
+	// 	left: calc(50% - #{rhythm(.05 / 2)});
+	// 	content: "";
+	// 	border-left: solid .05rem rgba($color-link-light,.7);
+	// }
+}

@@ -1,0 +1,92 @@
+/* ==========================================================================
+	 Nav
+	 ========================================================================== */
+
+/* Nav main */
+
+.nav-main {
+	overflow: hidden;
+
+	&__list {
+		margin-left: rhythm(-.5);
+		margin-right: rhythm(-.5);
+	}
+
+	&__item {
+		padding-top: rhythm(.5);
+		padding-right: rhythm(.5);
+		padding-bottom: rhythm(.5);
+		padding-left: rhythm(.5);
+
+		@include breakpoint(medium) {
+			padding-top: rhythm(.5);
+			padding-right: rhythm(.5);
+			padding-bottom: rhythm(.5);
+			padding-left: rhythm(.5);
+		}
+
+
+		a {
+			position: relative;
+			color: rgba($color-link-dark,.6);
+
+			&:hover,
+			&:focus {
+				color: $color-link-dark;
+
+				.no-touchevents & {
+					top: -2px;
+					border-bottom: 2px solid $color-link-dark;
+				}
+			}
+			&:active {
+
+				.no-touchevents & {
+					top: 0;
+					border-bottom-width: 0;
+				}
+			}
+
+			&[aria-current="page"] {
+				color: $color-link-dark;
+
+				.no-touchevents & {
+					top: 0;
+					border-bottom: none;
+					cursor: default;
+				}
+			}
+		}
+
+		// header & {
+
+		// 	// .template-project &,
+		// 	.template-error & {
+
+		// 		a {
+		// 			color: rgba($color-link-light,.7);
+
+		// 			&:hover,
+		// 			&:focus {
+		// 				color: $color-link-light;
+		// 			}
+
+		// 			&[aria-current="page"] {
+		// 				color: $color-link-light;
+		// 			}
+		// 		}
+		// 	}
+
+		// 	// .template-project.no-touchevents &,
+		// 	.template-error.no-touchevents & {
+
+		// 		a {
+		// 			&:hover,
+		// 			&:focus {
+		// 				border-bottom-color: $color-link-light;
+		// 			}
+		// 		}
+		// 	}
+		// }
+	}
+}

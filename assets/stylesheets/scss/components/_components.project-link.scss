@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Project link
+   ========================================================================== */
+
+.project-link {
+	position: relative;
+	z-index: 0;
+	display: block;
+	// margin-right: rhythm(-.5);
+	// margin-top: .05em;
+	// margin-left: rhythm(-.5);
+	padding-top: rhythm(1.5);
+	padding-bottom: rhythm(1.5);
+	// transition: color .48s ease;
+	// background-color: $color-gray-m-light;
+	// box-shadow: 0 6px 6px -6px $color-gray-m-light;
+	// border-bottom: .05em solid $color-base-black;
+	// color: $color-base-white;
+	// background-color: $color-base-black;
+	// transform: skewX(-25deg);
+	// box-shadow: 0 .1rem .5rem rgba($color-base-black,.3); // MAKE VARIABLE!!!;
+
+	.no-touchevents & {
+		transition: transform .24s ease-out;
+
+		&:hover {
+			z-index: 1;
+			// color: $color-base-black;
+			// background-color: $color-base-black;
+
+			.project-link__bg {
+				width: 100%;
+			}
+			// transform: skewX(0);
+		}
+	}
+}
+
+.project-link__meta {
+	margin-top: 0 !important;
+}
+
+.project-link__bg {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	transition: width .48s ease;
+	transform-origin: left;
+	// background-color: transparent;
+
+	.no-touchevents & {
+		// background: img-url("arrow-right.svg") no-repeat center right rhythm(.5) $color-gray-xx-light;
+		background-color: $color-gray-xx-light;
+	}
+}

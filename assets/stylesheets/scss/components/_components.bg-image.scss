@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Bg (background) image
+   ========================================================================== */
+
+/**
+ * Fluid, intrinsic ratio background images
+ *
+ * Example HTML:
+ * <div class="bg-image default-3by2 large-16by9"
+ *   style="background-image:url(cover.jpg)">
+ * </div>
+ *
+ * See:
+ * - http://nicolasgallagher.com/flexible-css-cover-images/
+ * - http://codepen.io/necolas/pen/Aksni
+ */
+
+.bg-image {
+	display: block;
+	overflow: hidden;
+	background-color: $color-base-black; // Fallback bg color
+	// box-shadow: 0 .1rem .5rem rgba($color-base-black,.4); // MAKE VARIABLE!!!
+
+	&--link {
+
+		// .bg-image__placeholder {
+		.bg-image__image {
+			max-height: 44vh;
+			min-height: 30vw;
+
+			@media screen and (orientation:landscape) {
+				max-height: 64vh;
+			}
+
+			&,
+			.no-js &,
+			.js &.lazyloaded {
+				// opacity: 1;
+				// animation: none; // disable animation
+				// transition: opacity .65s .25s ease-out; // visibility 0s (.5s + .05s + .25s);
+
+				&:hover {
+					opacity: .4;
+
+					@supports (mix-blend-mode: luminosity) {
+						// opacity: .4;
+						mix-blend-mode: normal;
+						// mix-blend-mode: hue;
+					}
+				}
+			}
+
+			// .touchevents & {
+			// 	opacity: .5 !important;
+			// }
+
+			.js .contentinfo & {
+				opacity: .6;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__image {
+		display: block;
+		background-position: center;
+		background-size: cover; // contain
+		background-repeat: no-repeat;
+		min-width: 100%;
+		height: 100%; // Important, te keep bg image (vertically) centered, when window height decreases!
+
+		@supports (mix-blend-mode: luminosity) {
+			mix-blend-mode: luminosity;
+		}
+
+		.no-js .bg-image > & {
+			display: none; // Noscript pattern
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			padding-bottom: 100%; // Default size of background image: a square (100% of the width)
+		}
+
+		.js &.lazyload {
+			opacity: 0;
+			will-change: opacity;
+			pointer-events: none;
+		}
+
+		&,
+		.no-js &,
+		.js &.lazyloaded {
+			opacity: .2;
+			// animation: fade-in .5s ease-in .15s normal both; // fade-in animation
+			transition: opacity .24s ease-out;
+		}
+	}
+}
+
+// /**
+//  * Different aspect ratio for different breakpoints
+//  */
+
+// /* For small and below (default) */
+
+// .default-3by2 .bg-image__image:before {
+// 	padding-bottom: percentage(2/3) !important;
+// }
+
+// .default-4by3 .bg-image__image:before {
+// 	padding-bottom: percentage(3/4) !important;
+// }
+
+// .default-16by9 .bg-image__image:before {
+// 	padding-bottom: percentage(9/16) !important;
+// }
+
+// /* For medium breakpoint and up */
+
+// @include breakpoint(medium) {
+// 	.medium-3by2 .bg-image__image:before { padding-bottom: percentage(2/3) !important; }
+// }

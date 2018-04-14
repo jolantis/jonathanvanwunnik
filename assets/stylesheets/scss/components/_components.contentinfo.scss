@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Contentinfo (aka site footer)
+   ========================================================================== */
+
+.contentinfo {
+	overflow: hidden;
+	padding-top: rhythm(2);
+	color: $color-base-white;
+	-webkit-font-smoothing: antialiased; // To prevent flickering of text on colored background in Safari (default is subpixel-rendering)
+
+	a:not(.bg-image--link) {
+		position: relative;
+
+		&:hover,
+		&:focus {
+			// color: $color-link-dark;
+
+			.no-touchevents & {
+				top: -2px;
+				border-bottom: 2px solid $color-link-light;
+			}
+		}
+		&:active {
+
+			.no-touchevents & {
+				top: 0;
+				border-bottom-width: 0;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		padding-top: rhythm(3);
+	}
+
+	footer {
+		padding-top: rhythm(2);
+		padding-bottom: rhythm(1);
+	}
+}

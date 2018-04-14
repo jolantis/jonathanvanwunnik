@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Banner (aka page header)
+   ========================================================================== */
+
+.banner {
+	width: 100%;
+	padding-top: rhythm(1);
+	padding-bottom: rhythm(2);
+	text-align: center;
+
+	.template-home & {
+	// .template-project &,
+	// .template-error & {
+		position: absolute;
+		z-index: $z-index-banner;
+	}
+
+	// // .template-project &,
+	// .template-error & {
+	// 	color: rgba($color-link-light,.7);
+	// }
+}
