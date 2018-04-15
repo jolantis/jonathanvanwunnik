@@ -40,7 +40,7 @@ $limit = (isset($limit) && $limit != false) ? $limit : false;
 					<span class="bg-text aligner aligner--stacked aligner--bottom">
 						<h3 class="bg-text__title"><?php echo $project->title()->smartypants()->widont(); ?></h3>
 						<p class="bg-text__meta">
-							Interaction and visual design, front-end
+							<?php echo $project->project_roles()->widont(); ?>
 						</p>
 					</span>
 				</a>
