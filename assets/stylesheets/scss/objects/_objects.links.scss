@@ -26,6 +26,11 @@
 		// margin-right: rhythm(-.05);
 		-webkit-tap-highlight-color: rgba(0,0,0,0); // Hide transparent highlight color that appears when tapping on iOS/Android
 
+		.hero & {
+			background-color: rgba($color-base-white,.2);
+			color: $color-base-white;
+		}
+
 		.contentinfo & {
 			background-color: $color-gray-x-light;
 		}
@@ -37,6 +42,10 @@
 
 	&:visited {
 		color: $color-link-visited;
+
+		.hero & {
+			color: $color-base-white;
+		}
 	}
 
 	&:hover,
@@ -45,6 +54,7 @@
 		border-radius: 0;
 
 		&,
+		.hero &,
 		.contentinfo & {
 			background-color: transparent;
 		}
@@ -53,6 +63,10 @@
 			top: -2px;
 			padding-bottom: rhythm(.05);
 			border-bottom: 2px solid $color-link-dark;
+		}
+
+		.no-touchevents .hero & {
+			border-bottom-color: $color-base-white;
 		}
 	}
 	&:active {

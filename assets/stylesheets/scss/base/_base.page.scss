@@ -27,12 +27,10 @@ html {
 	min-height: 100%; // [6]
 	color: $color-base-black;
 	// background-color: $background-color;
-	background-color: $color-base-black; // Fallback bg color
-	padding-top: rhythm(.25);
+	background-color: $color-base-white; // Fallback bg color
+	// padding-top: rhythm(.25);
 
 	&.template-home {
-	// &.template-project {
-	// &.template-error {
 
 		&,
 		body {
@@ -45,12 +43,6 @@ html.fonts-loaded {
 	font-family: $sans-web-font;
 }
 
-.banner,
-.hero,
-[role="main"] {
-	background-color: $background-color;
-}
-
-[role="main"] {
-	padding-bottom: rhythm(3);
-}
+// [role="main"] {
+// 	padding-bottom: rhythm(3.5);
+// }

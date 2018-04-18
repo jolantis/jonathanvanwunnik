@@ -102,7 +102,7 @@ use Html;
 
 <?php else: /* Full-featured output mode */ ?>
 
-	<span class="<?= $imageset->wrapperClass() ?>"<?php //echo ($page->page_color()) ? ' style="outline-color: ' . $page->page_color() . ';"' : ''; ?>>
+	<span class="<?= $imageset->wrapperClass() ?>">
 		<?php if($imageset->hasCssRules()): ?>
 			<style<?= $imageset->styleIdentifierAttribute() ?>><?= $imageset->cssRules() ?></style>
 		<?php endif ?>

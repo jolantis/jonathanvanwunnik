@@ -255,10 +255,8 @@
 	// p:first-of-type:not(.text-no-intro) {
 	// &.hero__text p {
 	// p:first-of-type {
-	h1 + p,
-	h2:first-child + p {
-		@extend .beta-heading;
-	}
+	// 	@extend .beta-heading;
+	// }
 
 	// p:first-child { }
 

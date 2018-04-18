@@ -23,7 +23,7 @@
 
 .compact-aligner {
 
-	@include breakpoint(small) {
+	@include breakpoint(compact) {
 		display: flex;
 
 		&__item--right {

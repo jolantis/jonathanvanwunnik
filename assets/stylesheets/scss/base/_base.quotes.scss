@@ -61,7 +61,7 @@
 
 		&:before,
 		&:after {
-			-webkit-font-smoothing: antialiased;
+			// -webkit-font-smoothing: antialiased; // To prevent flickering of text in Safari (default is subpixel-rendering)
 		}
 	}
 

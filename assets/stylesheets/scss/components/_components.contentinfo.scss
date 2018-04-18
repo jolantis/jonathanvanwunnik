@@ -4,37 +4,51 @@
 
 .contentinfo {
 	overflow: hidden;
-	padding-top: rhythm(2);
-	color: $color-base-white;
+	// padding-top: rhythm($grid-gutter-rhythm-unit / 2);
+	margin-top	: rhythm(3.5);
+	padding-top: rhythm(1.5 - ($grid-gutter-rhythm-unit));
+	// color: $color-base-white;
+	background-color: $color-gray-xx-light;
 	-webkit-font-smoothing: antialiased; // To prevent flickering of text on colored background in Safari (default is subpixel-rendering)
 
-	a:not(.bg-image--link) {
-		position: relative;
+	.bg-image__image {
+		max-height: 44vh;
+		min-height: 30vw;
 
-		&:hover,
-		&:focus {
-			// color: $color-link-dark;
-
-			.no-touchevents & {
-				top: -2px;
-				border-bottom: 2px solid $color-link-light;
-			}
-		}
-		&:active {
-
-			.no-touchevents & {
-				top: 0;
-				border-bottom-width: 0;
-			}
+		@media screen and (orientation:landscape) {
+			max-height: 64vh;
 		}
 	}
 
 	@include breakpoint(medium) {
-		padding-top: rhythm(3);
+		padding-top: rhythm(1.5);
 	}
 
 	footer {
-		padding-top: rhythm(2);
+		padding-top: rhythm(1);
 		padding-bottom: rhythm(1);
+		color: rgba($color-link-dark,.6);
+
+		a {
+			position: relative;
+
+			&:hover,
+			&:focus {
+				color: $color-link-dark;
+
+				.no-touchevents & {
+					top: -2px;
+					padding-bottom: rhythm(.05);
+					border-bottom: 2px solid $color-link-dark;
+				}
+			}
+			&:active {
+
+				.no-touchevents & {
+					top: 0;
+					border-bottom-width: 0;
+				}
+			}
+		}
 	}
 }

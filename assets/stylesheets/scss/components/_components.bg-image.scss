@@ -54,13 +54,13 @@
 			// 	opacity: .5 !important;
 			// }
 
-			.js .contentinfo & {
-				opacity: .6;
+			// .js .contentinfo & {
+			// 	opacity: .1;
 
-				&:hover {
-					opacity: 1;
-				}
-			}
+			// 	&:hover {
+			// 		opacity: 1;
+			// 	}
+			// }
 		}
 	}
 
@@ -98,6 +98,14 @@
 			opacity: .2;
 			// animation: fade-in .5s ease-in .15s normal both; // fade-in animation
 			transition: opacity .24s ease-out;
+		}
+
+		.js .contentinfo & {
+			opacity: 1;
+
+			@supports (mix-blend-mode: luminosity) {
+				mix-blend-mode: normal;
+			}
 		}
 	}
 }
