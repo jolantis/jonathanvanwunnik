@@ -235,7 +235,7 @@
 	> time,
 	> table,
 	figcaption p {
-		hyphens: auto;
+		@extend %text-hyphen;
 	}
 
 	/**
@@ -246,7 +246,7 @@
 	 */
 
 	.text-no-hyphen {
-		hyphens: none;
+		@extend %text-no-hyphen;
 	}
 
 	/* Paragraphs
