@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Custom page methods
+ * Custom filter methods
  *
  * @author      Jonathan van Wunnik <jonathan@artlantis.nl>
  *
