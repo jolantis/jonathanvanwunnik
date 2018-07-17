@@ -336,17 +336,22 @@
 	}
 
 	abbr {
+		letter-spacing: .02rem;
+		font-variant: small-caps; // https://developer.mozilla.org/en-US/docs/CSS/font-variant
+		text-transform: lowercase; // Enable if no small caps are a part of the webfont!
+		font-size: 112%; // Enable if no small caps are a part of the webfont!
 
-		.no-touchevents & {
-			border: none;
-			// text-decoration: underline;
-			// text-decoration: underline dotted;
-			// text-transform: lowercase;
-			letter-spacing: .02rem;
-			font-variant: small-caps; // https://developer.mozilla.org/en-US/docs/CSS/font-variant
-			cursor: help;
-			// background-color: $color-gray-xx-light;
-			border-bottom: 1px dotted $color-base-black;
+		&[title] {
+
+			.no-touchevents & {
+				border: none;
+				// text-decoration: underline;
+				// text-decoration: underline dotted;
+				text-decoration: none;
+				cursor: help;
+				// background-color: $color-gray-xx-light;
+				border-bottom: 1px dotted $color-base-black;
+			}
 		}
 	}
 
