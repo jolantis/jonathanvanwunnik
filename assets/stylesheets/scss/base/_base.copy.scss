@@ -252,10 +252,8 @@
 	/* Paragraphs
 	   ========================================================================== */
 
-	// p:first-of-type:not(.text-no-intro) {
-	// &.hero__text p {
 	// p:first-of-type {
-	// 	@extend .beta-heading;
+	// 	@extend .delta-heading;
 	// }
 
 	// p:first-child { }
