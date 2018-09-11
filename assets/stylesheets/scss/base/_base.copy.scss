@@ -253,7 +253,10 @@
 	   ========================================================================== */
 
 	// p:first-of-type {
-	// 	@extend .delta-heading;
+	// 	// @extend %heading-settings;
+	// 	// @extend %text-kern;
+	// 	// @include responsive-text-size($text-beta);
+	// 	@extend .beta-heading;
 	// }
 
 	// p:first-child { }
