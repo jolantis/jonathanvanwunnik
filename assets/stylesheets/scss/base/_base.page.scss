@@ -40,9 +40,5 @@ html {
 }
 
 html.fonts-loaded {
-	font-family: $sans-web-font; // Kawak Light
+	font-family: $sans-web-font-stack; // Kawak Light (300)
 }
-
-// [role="main"] {
-// 	padding-bottom: rhythm(3.5);
-// }
