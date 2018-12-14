@@ -1,5 +1,5 @@
 /**
- * Portfolio of UX designer and photographer Jonathan van wunnik — v1.0.6 — 2018-09-12
+ * Portfolio of UX designer and photographer Jonathan van wunnik — v1.0.7 — 2018-12-14
  * https://artlantis.nl
  * Copyright (c) 2018 Jonathan van Wunnik
  * License MIT
