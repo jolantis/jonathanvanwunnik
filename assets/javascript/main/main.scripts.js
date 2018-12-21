@@ -33,7 +33,7 @@ domready(function () {
 	new SmoothScroll('a[href*="#"]', {
 		// ignore: '[data-scroll-ignore]',                                         // Selector for links to ignore (must be a valid CSS selector)
 		// header: null,                                                           // Selector for fixed headers (must be a valid CSS selector)
-		speed: 300,                                                             // Integer. Amount of time in milliseconds it should take to scroll 1000px
+		speed: 500,                                                             // Integer. Amount of time in milliseconds it should take to scroll 1000px
 		// speedAsDuration: false,                                                 // If true, use speed as the total duration of the scroll animation
 		clip: true,                                                             // If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
 		// offset: 32,                                                             // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
